@@ -23,15 +23,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* Body */
-
-main{
-  background: transparent url(../images/background.jpg) center center / cover
-  no-repeat;
-  min-height: 100vh;
-  min-width: 100vw;
-  
-  position: relative;
-}
-

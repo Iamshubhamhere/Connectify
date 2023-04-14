@@ -115,7 +115,7 @@ input[type="email"] {
   font-size: 18px;
   font-weight: 400;
   color: var(--app-dark-bg);
-  background: rgba(255, 255, 255, 0.1) url("../image/email.png") no-repeat ;
+  background: rgba(255, 255, 255, 0.1) url("../images/email.png") no-repeat 16px 13px ;
   background-size: 17px;
   transition: border-color 0.25s ease-in-out;
 }
@@ -129,13 +129,17 @@ input[type="password"] {
   font-size: 18px;
   font-weight: 400;
   color: var(--app-dark-bg);
-  background: rgba(255, 255, 255, 0.1) url("../image/email.png") no-repeat ;
+  background: rgba(255, 255, 255, 0.1) url("../images/key.png") no-repeat 16px 13px ;
   background-size: 17px;
   transition: border-color 0.25s ease-in-out;
 }
 
 input[type="email"] + input[type="password"] {
   margin-top: 10px;
+}
+
+input::placeholder {
+  color: #5b5b5b;
 }
 
 .btn {

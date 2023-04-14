@@ -3,33 +3,69 @@
 
 
 
+function onEvent(event, selector, callback) {
+    return selector.addEventListener(event, callback);
+}
+
+function select(selector, parent = document) {
+    return parent.querySelector(selector);
+}
+
+function getElement(selector, parent = document) {
+    return parent.getElementById(selector);
+}
+
+function create(element, parent = document) {
+    return parent.createElement(element);
+}
+
+const logout = select('.logout');
+const logoutBtn = select('.logout a');
+const profile = select('.profile');
+
+
+const userbox = select('.other-users');
 const url = 'https://randomuser.me/api/?nat=CA&results=10';
 
-let colThree = document.querySelector('.rightBox');
-let listItems = [];
+const options = {
+    method: 'GET',
+    mode: 'cors'
+};
 
+async function getUsers() {
+    try {
+        const response = await fetch(url, options);
 
-getData();
-
-async function getData() {
-    const res = await fetch('https://randomuser.me/api/?nat=CA&results=10');
-    const {results} = await res.json()
-
-    colThree.innerHTML = ''
-
-    results.forEach(friend => {
-        const li = document.createElement('li');
-
-        listItems.push(li)
-
-        li.innerHTML = `
-        <div class="well">
-        <img src="${friend.picture.medium}" class="img">
-        <span style="color="#000">${friend.name.title} ${friend.name.first} ${friend.name.last}</span>
-        <span style="color="#000">(${friend.location.city})
-        <img class="add" src="./assets/image/add.png">
-        </div>
-    `;
-    colThree.appendChild(li)
-    })
+        if(response.status >= 200 && response.status < 400) {
+            const data = await response.json();
+            const users = data.results;
+            getProfileData(users);
+        }
+    } catch(error) {
+        console.log(error);
+    }
 }
+getUsers();
+
+function getProfileData(el) {
+    el.forEach(element => {
+        let userImage = create('div');
+        let userStorage = create('div');
+        let userInfo = create('div');
+        
+        userInfo.classList.add('userinfo');
+        userImage.classList.add('image');
+        userStorage.classList.add('user');
+        
+        userImage.innerHTML = `<img src= "${element.picture.medium}" max-width="100%" max-height="100%" + 
+                                border-radius="50%" >`;
+
+        userInfo.innerHTML = `<p>${element.name.first} ${element.name.last}</p>` +
+                             `<p>${element.location.city}</p>`
+
+        userStorage.append(userImage, userInfo);
+        
+        userbox.append(userStorage);
+    });
+}
+

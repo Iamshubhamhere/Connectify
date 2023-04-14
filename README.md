@@ -1,6 +1,6 @@
 # Connectify
 
-Click [here](https://iamshubhamhere.github.io/Rapid-fire_Game/) to open the website
+Click [here](https://iamshubhamhere.github.io/Connectify/) to open the website
 
 Username - newUser@gmail.com
 

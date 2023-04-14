@@ -161,7 +161,7 @@ body{
 
 /* LeftBox */
 .leftBox{
-    min-height: 640px;
+    max-height: 640px;
     width: 300px;
     display: grid;
     border: solid 1px var(--app-darkBlue);
@@ -278,6 +278,9 @@ ul{
 .fa-user {
     color: #f6c038;
 }
+.fa-sharp{
+  color: var(--app-dark-bg);
+}
 .fa-address-book {
     color: #e4e6eb;
     background-color: #000;
@@ -286,7 +289,7 @@ ul{
 /* RightBox */
 
 .rightBox {
-    min-height: 640px;
+    max-height: 900px;
     width: 300px;
     border-radius: 10px;
     display: grid;
@@ -299,6 +302,7 @@ ul{
     font-size: 20px;
     font-weight: 700;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .user {
@@ -357,7 +361,7 @@ img {
 
 .inputs {
     width: 650px;
-    height: auto;
+    height: 250px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -375,7 +379,7 @@ img {
     padding: 10px;
     background-color: transparent;
     resize: none;
-    color: #fff;
+    color: var(--app-dark-bg);
   }
   
   .center2 {
@@ -401,7 +405,7 @@ img {
   
   span {
     font-size: 16px;
-    color: var(--app-grey);
+    color: var(--app-dark-bg);
   }
   
   .grid {

@@ -144,3 +144,145 @@ input[type=text]  {
 body{
     background-color: var(--app-white);
 }
+
+
+/* --MAIN-- */
+
+.inputs {
+    width: 700px;
+    height: auto;
+    margin: 30px auto 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--app-dark-bg);
+  }
+  
+  .post-txt {
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: transparent;
+    resize: none;
+    color: #fff;
+  }
+  
+  .center2 {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #post {
+    text-align: center;
+    height: 40px;
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--app-green);
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #post:active {
+    border: 1px solid #000;
+  }
+  
+  span {
+    font-size: 16px;
+    color: var(--app-grey);
+  }
+  
+  .grid {
+    min-height: 350px;
+    width: 1050px;
+    margin: 25px auto 0;
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    grid-auto-flow: row;
+  }
+  
+  .post {
+    width: 650px;
+    min-height: 110px;
+    height: fit-content;
+    padding: 10px;
+    color: var(--app-light-white);
+    background-color: var(--app-grey);
+    border-radius: 5px;
+  }
+  
+  .postHead {
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+    font-size: 17px;
+    letter-spacing: 0.2px;
+  }
+  
+  .postHead span {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--app-dark-bg);
+  }
+  
+  .postHead p {
+    font-size: 18px;
+  
+    color: var(--app-dark-bg);
+  }
+  
+  .postHead img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .postBody {
+    margin: 15px 0 11px;
+    color: var(--app-dark-bg);
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 8px;
+  }
+  
+  #postFile {
+    display: none;
+  }
+  
+  .postFile {
+    padding-top: 8px;
+    color: var(--app-grey);
+    cursor: pointer;
+  }
+  
+  .postFile i {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+  
+  .img-icon:focus .Change {
+    display: block;
+  }
+  
+  .img-icon .Change {
+    display: none;
+    position: relative;
+    background-color: #3c3f4b;
+    padding: 10px;
+    min-width: 260px;
+    top: 20px;
+    right: 100px;
+    z-index: 1;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  

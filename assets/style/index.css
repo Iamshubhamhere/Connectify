@@ -11,6 +11,7 @@
   --app-red-hover: #ff2846;
   --app-grey: #bebebe;
   --app-white: #f1f1f1;
+  --app-darkBlue: #350099;
 }
 
 /*----------- Container -------*/
@@ -24,14 +25,155 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Body */
 
-main{
+/* Body */
+body {
   background: transparent url(../images/background.jpg) center center / cover
   no-repeat;
   min-height: 100vh;
   min-width: 100vw;
-  
-  position: relative;
+}
+/* Header */
+
+header {
+  height: 65px;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  text-align: center;
 }
 
+.heading{
+  font-size: 45px;
+  font-weight: 800;
+  color: var(--app-dark-bg);
+  letter-spacing: 3px;
+}
+
+span {
+  color: var(--app-darkBlue);
+}
+/* Main */
+main{
+  
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.grid{
+min-height: 540px;
+width: 526px;
+border-radius: 50px;
+display: grid;
+border: solid 2px var(--app-dark-bg);
+margin-top: 50px;
+justify-content: center;
+}
+
+.upper {
+  margin-top: 25px;
+}
+
+h2{
+  font-size: 40px;
+  color: var(--app-dark-bg);
+  margin-top: 20px;
+}
+
+.p1 .p2 {
+  margin: 0;
+}
+
+.p1{
+  color: var(--app-darkBlue);
+    font-size: 30px;
+}
+
+.p2{
+  font-size: 20px;
+  color: var(--app-darkBlue);
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.input-info{
+  display: grid;
+  justify-items: start;
+  justify-content: start;
+  margin-bottom: 15px;
+}
+input[type="email"] {
+  width: 320px;
+  height: 46px;
+  border: 2px solid rgba(22, 11, 11, 0.1) ;
+  border-radius: 50px;
+  padding: 0 15px 0 42px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--app-dark-bg);
+  background: rgba(255, 255, 255, 0.1) url("../image/email.png") no-repeat ;
+  background-size: 17px;
+  transition: border-color 0.25s ease-in-out;
+}
+
+input[type="password"] {
+  width: 320px;
+  height: 46px;
+  border: 1px solid rgba(22, 11, 11, 0.1);
+  border-radius: 50px;
+  padding: 0 15px 0 42px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--app-dark-bg);
+  background: rgba(255, 255, 255, 0.1) url("../image/email.png") no-repeat ;
+  background-size: 17px;
+  transition: border-color 0.25s ease-in-out;
+}
+
+input[type="email"] + input[type="password"] {
+  margin-top: 10px;
+}
+
+.btn {
+  display: flex;
+  gap: 20px;
+}
+
+.btn-1 {
+  cursor: pointer;
+  padding: 10px 35px;
+  font-size: 16px;
+  background-color: var(--app-darkBlue);
+  color: var(--app-grey);
+  border-radius: 30px;
+  margin-top: 20px;
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(28, 0, 181, 0.3);
+}
+.btn-1:hover {
+  border: 1px solid var(--app-white);
+  cursor: pointer;
+}
+.btn-2 {
+  cursor: pointer;
+  padding: 10px 35px;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--app-dark-bg);
+  border-radius: 30px;
+  margin-top: 20px;
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(28, 0, 181, 0.3);
+}
+.btn-2:hover {
+  border: 1px solid var(--app-white);
+  cursor: pointer;
+} 
+
+.bottom {
+  margin-top: 10px;
+}

@@ -172,7 +172,17 @@ body{
     /* background-color: var(--app-grey); */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
 }
+.name {
+  font-weight: 800;
+  font-size: 22px;
+}
 
+.branch{
+  font-weight: 700;
+}
+.mail{
+  font-weight: 700;
+}
 .userIcon{
     width: 90px;
     height: 90px;
